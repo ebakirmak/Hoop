@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Hoop !!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello camera fragment</string>
+    <string name="chats">Chats</string>
+    <string name="calls">Calls</string>
+    <string name="camera">Camera</string>
+    <string name="status">Status</string>
+    <string name="hello_calls_fragment">Hello Calls Fragment</string>
 </resources>
