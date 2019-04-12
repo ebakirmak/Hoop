@@ -11,7 +11,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(),
     CameraFragment.OnFragmentInteractionListener,
     CallsFragment.OnFragmentInteractionListener,
+    ChatFragment.OnFragmentInteractionListener,
+    StatusFragment.OnFragmentInteractionListener,
     View.OnClickListener {
+
     override fun onFragmentInteraction(uri: Uri) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -26,11 +29,12 @@ class MainActivity : AppCompatActivity(),
 
     fun init() {
         btnCalls.setOnClickListener(this)
-        //btnChats.setOnClickListener(this)
+        btnChats.setOnClickListener(this)
         btnCamera.setOnClickListener(this)
+        btnStatus.setOnClickListener(this)
     }
 
-    fun initFragment(isFirst: Boolean, fragmentType: String): Unit {
+    fun initFragment(isFirst: Boolean, fragmentType: String) {
 
         if (isFirst) {
             val cameraFragment = CameraFragment.newInstance("Lover", 100)
@@ -41,6 +45,8 @@ class MainActivity : AppCompatActivity(),
             val fragmentObject = when (fragmentType) {
                 FragmentTypes.Camera.toString() -> CameraFragment.newInstance("Lover", 100)
                 FragmentTypes.Calls.toString() -> CallsFragment.newInstance("1", "1")
+                FragmentTypes.Chats.toString() -> ChatFragment.newInstance("1","2")
+                FragmentTypes.Status.toString() -> StatusFragment.newInstance("2","3")
                 else -> null
             }
             supportFragmentManager.beginTransaction().apply {

@@ -20,6 +20,8 @@
                   android:layout_alignParentBottom="true"
                   android:id="@+id/bottomTabLayout">
 
+
+
         <Button android:id="@+id/btnChats"
                 android:layout_width="wrap_content"
                 android:layout_height="60dp"

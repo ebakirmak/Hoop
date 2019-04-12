@@ -8,4 +8,6 @@
     <string name="camera">Camera</string>
     <string name="status">Status</string>
     <string name="hello_calls_fragment">Hello Calls Fragment</string>
+    <string name="chat_fragment">Chat Fragment</string>
+    <string name="welcome_status_fragment">Welcome Status Fragment</string>
 </resources>
