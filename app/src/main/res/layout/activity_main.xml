@@ -1,51 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
+        tools:context=".ui.MainActivity"
         android:orientation="vertical">
+
+    <include layout="@layout/tab_layout"/>
 
     <FrameLayout
             android:id="@+id/fragmentAll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_alignTop="@id/bottomTabLayout"/>
+            android:layout_below="@id/bottomTabLayout"/>
 
-
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="50dp"
-                  android:layout_alignParentBottom="true"
-                  android:id="@+id/bottomTabLayout">
-
-
-
-        <Button android:id="@+id/btnChats"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                tools:text="Chats"
-                android:text="@string/chats"/>
-
-        <Button android:id="@+id/btnCalls"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                tools:text="Calls"
-                android:text="@string/calls"/>
-
-        <Button android:id="@+id/btnCamera"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                tools:text="Camera"
-                android:text="@string/camera"/>
-
-        <Button android:id="@+id/btnStatus"
-                android:layout_width="wrap_content"
-                android:layout_height="60dp"
-                tools:text="Status"
-                android:text="@string/status"/>
-
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

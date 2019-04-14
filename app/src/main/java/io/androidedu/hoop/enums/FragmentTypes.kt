@@ -1,4 +1,4 @@
-package io.androidedu.hoop
+package io.androidedu.hoop.enums
 
 enum class FragmentTypes {
     Camera,
