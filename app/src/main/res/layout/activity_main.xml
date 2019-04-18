@@ -7,12 +7,14 @@
         tools:context=".ui.MainActivity"
         android:orientation="vertical">
 
-    <include layout="@layout/tab_layout"/>
-
-    <FrameLayout
-            android:id="@+id/fragmentAll"
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/hoopTabLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/bottomTabLayout"/>
+            android:layout_height="wrap_content"/>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/wpContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>
