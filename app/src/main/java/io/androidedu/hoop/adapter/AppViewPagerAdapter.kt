@@ -28,7 +28,7 @@ class AppViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         add("Camera")
         add("Chats")
         add("Status")
-        add("Durum")
+        add("Calls")
     }
 
 
