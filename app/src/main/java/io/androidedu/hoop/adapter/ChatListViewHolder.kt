@@ -15,7 +15,7 @@ class ChatListViewHolder(parent: ViewGroup) :
             false
         )
     ) {
-    private val imgProfile = itemView.imgProfile
+    private val imgProfile = itemView.imgUserProfile
     private val txtUserName = itemView.txtUserName
     private val txtUserMessage = itemView.txtUserMessage
     private val txtDate = itemView.txtDate

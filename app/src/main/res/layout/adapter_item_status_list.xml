@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center_vertical"
-              android:padding="16dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+              style="@style/adapter_item">
 
     <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/imgUserProfile"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/ic_person"
             app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            app:civ_border_color="#FF000000"
+            style="@style/adapter_item_imgUserProfile"/>
 
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
@@ -21,11 +16,9 @@
                   android:layout_marginLeft="8dp"
                   android:layout_marginRight="8dp">
 
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
+        <TextView tools:text="Emre Berk AKIRMAK"
                   android:id="@+id/txtUserName"
-                  android:textSize="12sp"
-                  android:textColor="@android:color/background_dark"/>
+                  style="@style/adapter_item_txtName"/>
 
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"

@@ -9,7 +9,6 @@ class ChatListAdapter(
     val onItemClickListener: (chatModel: ChatModel) -> Unit
 ) : RecyclerView.Adapter<ChatListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatListViewHolder {
-
         return ChatListViewHolder(parent)
     }
 
