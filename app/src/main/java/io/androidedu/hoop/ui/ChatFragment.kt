@@ -18,8 +18,8 @@ import kotlin.concurrent.thread
 
 
 class ChatFragment : Fragment() {
-    var dbInstance: AppDatabase? = null
-    var chatDao: ChatDao? = null
+    private var dbInstance: AppDatabase? = null
+    private var chatDao: ChatDao? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,7 +53,7 @@ class ChatFragment : Fragment() {
     }
 
     private fun insertChatDataToDatabase() {
-        if (chatDao?.RetrieveAllChatList()!!.isEmpty()) {
+        if (chatDao?.retrieveAllChatList()!!.isEmpty()) {
 
             val chatEntityTeacher = ChatEntity(ProfilePhoto = R.drawable.ic_person,
                     UserName = "Gökhan ÖZTÜRK",
@@ -91,21 +91,21 @@ class ChatFragment : Fragment() {
                     ChatDate = "20 Nisan 2019")
 
 
-            chatDao?.InsertChat(chatEntityTeacher)
-            chatDao?.InsertChat(chatEntityFirst)
-            chatDao?.InsertChat(chatEntitySecond)
-            chatDao?.InsertChat(chatEntityThird)
-            chatDao?.InsertChat(chatEntityFourth)
-            chatDao?.InsertChat(chatEntityFifth)
-            chatDao?.InsertChat(chatEntitySixth)
+            chatDao?.insertChat(chatEntityTeacher)
+            chatDao?.insertChat(chatEntityFirst)
+            chatDao?.insertChat(chatEntitySecond)
+            chatDao?.insertChat(chatEntityThird)
+            chatDao?.insertChat(chatEntityFourth)
+            chatDao?.insertChat(chatEntityFifth)
+            chatDao?.insertChat(chatEntitySixth)
         }
 
     }
 
     private fun retrieveChatDataFromDatabase(): ArrayList<ChatModel> {
 
-        val chatModelList: ArrayList<ChatModel> = ArrayList<ChatModel>()
-        val chatEntityList = chatDao?.RetrieveAllChatList()
+        val chatModelList: ArrayList<ChatModel> = ArrayList()
+        val chatEntityList = chatDao?.retrieveAllChatList()
         chatEntityList?.forEach {
             val chatModel = ChatModel(it.ProfilePhoto, it.UserName, it.UserMessage, it.ChatDate)
             chatModelList.add(chatModel)

@@ -2,7 +2,7 @@
 
 buildscript {
     ext{
-        kotlin_version = '1.3.21'
+        kotlin_version = '1.3.30'
         version_recyclerView = "1.0.0"
     }
     repositories {

@@ -17,10 +17,7 @@ class MainActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        // Fragmentleri ekranda gösteriyor.
         wpContainer.adapter = AppViewPagerAdapter(supportFragmentManager)
-        // Tab-ı temsil ediyor
         hoopTabLayout.setupWithViewPager(wpContainer)
         wpContainer.currentItem = 1
         hoopTabLayout.addOnTabSelectedListener(this)

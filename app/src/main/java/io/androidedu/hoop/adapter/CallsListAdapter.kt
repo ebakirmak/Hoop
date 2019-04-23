@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.androidedu.hoop.model.CallsModel
 
-class CallsListAdapter(val callsList: ArrayList<CallsModel>) : RecyclerView.Adapter<CallsListViewHolder>() {
+class CallsListAdapter(private val callsList: ArrayList<CallsModel>) : RecyclerView.Adapter<CallsListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CallsListViewHolder = CallsListViewHolder(parent)
 
     override fun getItemCount(): Int = callsList.size

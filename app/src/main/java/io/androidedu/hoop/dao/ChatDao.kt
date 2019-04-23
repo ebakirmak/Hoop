@@ -7,18 +7,18 @@ import io.androidedu.hoop.entity.ChatEntity
 interface ChatDao {
 
     @Insert
-    fun InsertChat(chatEntity: ChatEntity)
+    fun insertChat(chatEntity: ChatEntity)
 
     @Delete
-    fun DeleteChat(chatEntity: ChatEntity)
+    fun deleteChat(chatEntity: ChatEntity)
 
     @Update
-    fun UpdateChat(chatEntity: ChatEntity)
+    fun updateChat(chatEntity: ChatEntity)
 
     @Query("SELECT * FROM ChatTable where id = :id")
-    fun RetrieveSingleChat(id: Int): ChatEntity
+    fun retrieveSingleChat(id: Int): ChatEntity
 
     @Query("SELECT * FROM ChatTable")
-    fun RetrieveAllChatList(): List<ChatEntity>
+    fun retrieveAllChatList(): List<ChatEntity>
 
 }

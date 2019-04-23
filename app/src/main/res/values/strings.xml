@@ -11,4 +11,10 @@
     <string name="chat_fragment">Chat Fragment</string>
     <string name="welcome_status_fragment">Welcome Status Fragment</string>
     <string name="my_status">My Status</string>
+    <string name="dummy_text">dummyText</string>
+    <string name="call_type">Call Type</string>
+    <string name="communication_type">Communication Type</string>
+    <string name="my_status_add">My Status Add</string>
+    <string name="touch_for_add_a_status_update">Touch for add a status update</string>
+    <string name="callCount">(%1d)</string>
 </resources>

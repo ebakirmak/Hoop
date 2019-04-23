@@ -11,20 +11,19 @@ import io.androidedu.hoop.ui.StatusFragment
 //
 class AppViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
-    //lazy-lateinit blog yaz.
     private val cameraFragment by lazy { CameraFragment.newInstance() }
     private val statusFragment by lazy { StatusFragment.newInstance() }
     private val callFragment by lazy { CallsFragment.newInstance() }
     private val chatsFragment by lazy { ChatFragment.newInstance() }
 
-    val fragmentList = ArrayList<Fragment>().apply {
+    private val fragmentList = ArrayList<Fragment>().apply {
         add(cameraFragment)
         add(chatsFragment)
         add(statusFragment)
         add(callFragment)
     }
 
-    val fragmentTitleList = ArrayList<String>().apply {
+    private val fragmentTitleList = ArrayList<String>().apply {
         add("Camera")
         add("Chats")
         add("Status")

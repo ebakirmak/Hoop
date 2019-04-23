@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import io.androidedu.hoop.dao.ChatDao
 import io.androidedu.hoop.entity.ChatEntity
 
-@Database(entities = [ChatEntity::class], version = 1)
+@Database(entities = [ChatEntity::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun getChatDao(): ChatDao

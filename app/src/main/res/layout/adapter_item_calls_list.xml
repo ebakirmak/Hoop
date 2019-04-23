@@ -10,7 +10,7 @@
             style="@style/adapter_item_imgUserProfile"/>
 
     <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
@@ -18,7 +18,7 @@
             android:paddingRight="16dp">
         <TextView
                 android:id="@+id/txtUserName"
-                tools:text="Emre Berk AKIRMAK"
+                tools:text="@string/dummy_text"
                 style="@style/adapter_item_txtName"/>
 
         <LinearLayout
@@ -29,7 +29,8 @@
                     android:id="@+id/imgCallType"
                     android:layout_width="24dp"
                     android:layout_height="wrap_content"
-                    tools:background="@drawable/ic_camera_black"/>
+                    tools:background="@drawable/ic_camera_black"
+                    android:contentDescription="@string/call_type"/>
 
             <TextView
                     android:id="@+id/txtCallCount"
@@ -56,7 +57,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:background="@drawable/ic_camera_black"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/communication_type"/>
 
 
 </LinearLayout>

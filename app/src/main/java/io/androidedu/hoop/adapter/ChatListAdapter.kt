@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.RecyclerView
 import io.androidedu.hoop.model.ChatModel
 
 class ChatListAdapter(
-    val chatList: ArrayList<ChatModel>,
-    val onItemClickListener: (chatModel: ChatModel) -> Unit
+        private val chatList: ArrayList<ChatModel>,
+        private val onItemClickListener: (chatModel: ChatModel) -> Unit
 ) : RecyclerView.Adapter<ChatListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatListViewHolder {
         return ChatListViewHolder(parent)

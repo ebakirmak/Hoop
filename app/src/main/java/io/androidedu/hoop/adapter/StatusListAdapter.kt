@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.RecyclerView
 import io.androidedu.hoop.model.StatusModel
 
 class StatusListAdapter(
-    val statusList: ArrayList<StatusModel>,
-    val onItemClickListener: (statusModel: StatusModel) -> Unit
+        private val statusList: ArrayList<StatusModel>,
+        private val onItemClickListener: (statusModel: StatusModel) -> Unit
 ) : RecyclerView.Adapter<StatusListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatusListViewHolder {
         return StatusListViewHolder(parent)
